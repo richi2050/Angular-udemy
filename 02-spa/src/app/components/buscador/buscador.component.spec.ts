@@ -19,6 +19,7 @@ describe('BuscadorComponent', () => {
     fixture.detectChanges();
   });
 
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });
