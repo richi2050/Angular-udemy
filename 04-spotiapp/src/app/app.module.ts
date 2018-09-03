@@ -8,10 +8,15 @@ import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { ArtistaComponent } from './components/artista/artista.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
+//Servicios
+import { SpotifyService } from './services/spotify.service';
 
 //importacion de rutas
 
 import {ROUTES} from './app.routes';
+
+// importa pipes
+import { NoimagesPipe } from './pipes/noimages.pipe';
 
 @NgModule({
   declarations: [
@@ -19,14 +24,17 @@ import {ROUTES} from './app.routes';
     HomeComponent,
     SearchComponent,
     ArtistaComponent,
-    NavbarComponent
+    NavbarComponent,
+    NoimagesPipe
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot( ROUTES, {useHash:true })
   ],
-  providers: [],
+  providers: [
+    SpotifyService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
