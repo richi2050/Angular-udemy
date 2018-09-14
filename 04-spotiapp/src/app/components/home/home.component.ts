@@ -12,7 +12,8 @@ export class HomeComponent{
   loading: boolean;
   constructor(private spotify: SpotifyService) {
     this.loading = true;
-  this.spotify.getReleases().subscribe((data: any) => { console.log(data);
+  this.spotify.getReleases().subscribe((data: any) => {
+    //console.log(data);
     this.nuevasCancion = data;
     this.loading = false;
   });
