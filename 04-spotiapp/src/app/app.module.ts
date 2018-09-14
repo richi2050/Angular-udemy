@@ -17,6 +17,8 @@ import {ROUTES} from './app.routes';
 
 // importa pipes
 import { NoimagesPipe } from './pipes/noimages.pipe';
+import { TarjetasComponent } from './components/tarjetas/tarjetas.component';
+import { LoadingComponent } from './components/shared/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { NoimagesPipe } from './pipes/noimages.pipe';
     SearchComponent,
     ArtistaComponent,
     NavbarComponent,
-    NoimagesPipe
+    NoimagesPipe,
+    TarjetasComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
